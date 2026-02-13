@@ -16,9 +16,9 @@ class SensorDataController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'temperature' => 'required|integer',
-            'phlevel' => 'required|integer',
-            'lux' => 'required|integer',
+            'temperature' => 'required',
+            'phlevel' => 'required',
+            'lux' => 'required',
         ]);
 
         $sensorData = SensorData::create($validatedData);
